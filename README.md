@@ -2,11 +2,11 @@
 |Puzzle No.|Average|Max |Min |
 |----------|-------|----|----|
 |1         |39.6ms |74ms|26ms|
-|3         |86.9ms |207ms|57ms|
+|3         |57.3ms |107ms|37ms|
 |6         |251.4ms|516ms|167ms|
 
 # How to get stats?
-`groovy src/common/LaunchGroovy.groovy (path to groovy file)`
+`src/common/LaunchGroovy.groovy (path to groovy file)`
 
 # Schedule
 ## 2016-03-15
