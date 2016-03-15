@@ -2,7 +2,7 @@
 package common
 
 /**
- * Created by 01011996 on 3/8/16.
+ * Created by tanayuk on 3/8/16.
  */
 def scriptName = args[0]
 def result = []
