@@ -19,6 +19,8 @@ https://github.com/matsumatsu20/math_puzzle
 ## Go
 https://github.com/neko-neko/math_puzzle
 ## Java
-TBD
+https://github.com/tsudatomo/math-puzzle
 ## Javascript
 https://github.com/cauchym/math_puzzle
+## Shell
+https://github.com/hayaken/math_puzzle

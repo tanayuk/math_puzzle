@@ -29,10 +29,12 @@ package questions
           // i.e. 1+2+34
           formula = formula.substring(0,5) + operand3.toString() + formula.substring(5)
         }
-        //println("Current formula: ${formula}")
         if(formula =~ /\/0/){
           formula = '0'
         }
+        // To avoid octal calculation
+        formula.replace('08','8').replace('09','9')
+
         if(formula.length() > 4 && evaluate(formula.toString()) == Integer.valueOf(reverse)){
           println("Original Formula (${formula}) results to ${reverse}")
           // This is for 1000
