@@ -13,6 +13,9 @@ A potential answer for math puzzle by Groovy.
 `src/common/LaunchGroovy.groovy (path to groovy file)`
 
 ## Schedule
+### 2016-03-29
+ - [ ] Q39
+ - [ ] Q40
 ### 2016-03-22
  - [ ] Q16
  - [ ] Q24
