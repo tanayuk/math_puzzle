@@ -46,7 +46,7 @@ def locToCoordinate(int loc){
 def playReverse(int position, String board){
   def reverseTarget = getReverseTarget(position)
   reverseTarget.each{flipPosition->
-
+    // TODO: implement this.
   }
 }
 
