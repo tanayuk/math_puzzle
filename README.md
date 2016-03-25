@@ -36,3 +36,5 @@ https://github.com/tsudatomo/math-puzzle
 https://github.com/cauchym/math_puzzle
 ### Shell
 https://github.com/hayaken/math_puzzle
+### Python
+https://github.com/yuto-ktok/math_puzzle
