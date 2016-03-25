@@ -4,7 +4,10 @@ package codeiq
  * Created by tanayuk on 3/24/16.
  */
 def allowedDigit = ['1','2','3','4']
-def n = System.console().readLine()
+//def n = System.console().readLine()
+Scanner cin=new Scanner(System.in)
+def n=cin.nextLine()
+
 def ansCount = 0
 def startNumber = ""
 for(int i = 1; i < Integer.valueOf(n); i++){
@@ -23,10 +26,11 @@ numberList.each {
   def flag = true
   "${it}".split("").each{ digit ->
     if(!allowedDigit.contains(digit)){
-      false
+      flag = false
     }
   }
   if(flag){
-    count++
+    ansCount++
   }
 }
+println(ansCount)
