@@ -13,29 +13,23 @@ package questions
  * Created by tanayuk on 3/22/16.
  */
 def emptyBoard = "00000000000000000000"
-def nodeList = []
-def ansMap
-//recursiveFlip(emptyBoard)
-println(getReverseTarget(14))
+def ansMap = new HashMap<String, List>()
+recursiveFlip("",emptyBoard,ansMap)
 
-
-def recursiveFlip(board){
+def recursiveFlip(String prevPosition, String board, Map ansMap){
   (1..16).each{ position ->
     def playedBoard = playReverse(position, board)
-    recursiveFlip(playedBoard)
+    def movementHistory = String.valueOf(prevPosition) + String.valueOf(position)
+    if("0000000000000000".equals(playedBoard)) return
+    ansMap[movementHistory] = playedBoard
+    //println(ansMap)
+    recursiveFlip(movementHistory,playedBoard, ansMap)
   }
 }
-/**
- * Returns cascaded location to 4 * 4 map
- *
- * @param loc
- * @return coordinate as map formatting (x, y)
- */
-def locToCoordinate(int loc){
-  return loc < 5 ? ["${loc}": '1'] : loc < 9 ? ["${loc - 4}": '2'] : loc < 13 ? ["${loc - 8}": '3'] : ["${loc - 12}": '4']
-}
+
 
 /**
+ * (Tested)
  * Play reverse game by specifying touching position as 1st argument,
  * and current board status as 2nd argument.
  *
@@ -45,9 +39,21 @@ def locToCoordinate(int loc){
  */
 def playReverse(int position, String board){
   def reverseTarget = getReverseTarget(position)
-  reverseTarget.each{flipPosition->
-    // TODO: implement this.
+  int currentPosition = 1
+  def playedBoard = ""
+  board.split("").each { box ->
+    if (reverseTarget.contains(currentPosition)) {
+      if ('0'.equals(box)) {
+        playedBoard += '1'
+      } else {
+        playedBoard += '0'
+      }
+    } else {
+      playedBoard += box
+    }
+    currentPosition++
   }
+  return playedBoard
 }
 
 /**
@@ -81,4 +87,14 @@ def getReverseTarget(int position){
     }
   }
   return targets
+}
+
+/**
+ * Returns cascaded location to 4 * 4 map
+ *
+ * @param loc
+ * @return coordinate as map formatting (x, y)
+ */
+def locToCoordinate(int loc){
+  return loc < 5 ? ["${loc}": '1'] : loc < 9 ? ["${loc - 4}": '2'] : loc < 13 ? ["${loc - 8}": '3'] : ["${loc - 12}": '4']
 }
