@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy
 package questions
 /**
  * Use cascaded numbers as board where 0 is white, and 1 is black.
@@ -22,7 +23,7 @@ def recursiveFlip(String prevPosition, String board, Map ansMap){
     def movementHistory = String.valueOf(prevPosition) + String.valueOf(position)
     if("0000000000000000".equals(playedBoard)) return
     ansMap[movementHistory] = playedBoard
-    //println(ansMap)
+    println(ansMap)
     recursiveFlip(movementHistory,playedBoard, ansMap)
   }
 }
