@@ -8,4 +8,5 @@ https://codeiq.jp/
 ## history
  - [ ] Q2561
  - [ ] Q2578
+ - [ ] Q2717
  - [ ] Q2769
