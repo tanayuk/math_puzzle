@@ -3,12 +3,12 @@ package codeiq
 /**
  *
  * Bingo pattern
- *   6 7 8 9 10
+ *   5 6 7 8 9
+ * 0
  * 1
  * 2
- * 3
- * 4 12
- * 5        11
+ * 3 11
+ * 4         10
  *
  * Created by tanayuk on 4/19/16.
  */
@@ -37,6 +37,10 @@ def calcMinimumNum(int[][][] bingo){
   }
 }
 
-def getBingoNumbers(int[][][] bingo, int pattern){
-
+def getBingoNumbers(int[][] bingoBoard, int pattern){
+  if(pattern < 5){
+    return bingoBoard[pattern]
+  }else if(pattern < 10){
+    return bingoBoard[]
+  }
 }
